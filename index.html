@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="light dark" />
+    <title>포트폴리오 | 이은성</title>
+    <meta name="description" content="모던하고 반응형 개인 포트폴리오" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Pretendard:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header" id="top">
+      <div class="container header-inner">
+        <a href="#top" class="logo" aria-label="홈으로 이동">Do it</a>
+
+        <nav class="nav" aria-label="주요 메뉴">
+          <button class="nav-toggle" aria-expanded="false" aria-controls="primary-menu" aria-label="메뉴 열기">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+          </button>
+          <ul id="primary-menu" class="nav-list">
+            <li><a href="#about">About</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-label="히어로">
+        <div class="container hero-inner">
+          <div class="hero-copy">
+            <h1>안녕하세요, <span class="accent">이은성</span> 입니다.</h1>
+            <p>프론트엔드 중심의 풀스택 개발자이며, 사용자 경험 중심의 모던 웹을 만듭니다.</p>
+            <div class="hero-cta">
+              <a href="#projects" class="btn primary">프로젝트 보기</a>
+              <a href="#contact" class="btn ghost">연락하기</a>
+            </div>
+          </div>
+          <div class="hero-media" role="img" aria-label="히어로 이미지"></div>
+        </div>
+      </section>
+
+      <section id="about" class="about section">
+        <div class="container narrow">
+          <h2 class="section-title">About</h2>
+          <p>
+            저는 웹 표준과 접근성을 중시하고, 디자인 시스템과 성능 최적화에 관심이 많습니다.
+            React, TypeScript, Node.js를 활용해 제품을 빠르고 안정적으로 만듭니다.
+          </p>
+        </div>
+      </section>
+
+      <section id="projects" class="projects section">
+        <div class="container">
+          <h2 class="section-title">Projects</h2>
+          <div class="grid cards">
+            <article class="card">
+              <div class="card-media" role="img" aria-label="프로젝트 1 미리보기"></div>
+              <div class="card-body">
+                <h3>Project One</h3>
+                <p>반응형 대시보드와 라이트/다크 테마를 지원하는 웹앱.</p>
+                <div class="card-actions">
+                  <a class="btn small" href="#" target="_blank" rel="noopener">Live</a>
+                  <a class="btn small ghost" href="#" target="_blank" rel="noopener">GitHub</a>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-media" role="img" aria-label="프로젝트 2 미리보기"></div>
+              <div class="card-body">
+                <h3>Project Two</h3>
+                <p>이미지 최적화와 코드 스플리팅으로 빠른 퍼포먼스를 달성.</p>
+                <div class="card-actions">
+                  <a class="btn small" href="#" target="_blank" rel="noopener">Live</a>
+                  <a class="btn small ghost" href="#" target="_blank" rel="noopener">GitHub</a>
+                </div>
+              </div>
+            </article>
+            <article class="card">
+              <div class="card-media" role="img" aria-label="프로젝트 3 미리보기"></div>
+              <div class="card-body">
+                <h3>Project Three</h3>
+                <p>웹 접근성 기준을 반영한 컴포넌트 라이브러리.</p>
+                <div class="card-actions">
+                  <a class="btn small" href="#" target="_blank" rel="noopener">Live</a>
+                  <a class="btn small ghost" href="#" target="_blank" rel="noopener">GitHub</a>
+                </div>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact section">
+        <div class="container narrow">
+          <h2 class="section-title">Contact</h2>
+          <form class="contact-form" novalidate>
+            <div class="form-row">
+              <label for="name">이름</label>
+              <input id="name" name="name" type="text" placeholder="홍길동" required />
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="form-row">
+              <label for="email">이메일</label>
+              <input id="email" name="email" type="email" placeholder="you@example.com" required />
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="form-row">
+              <label for="message">메시지</label>
+              <textarea id="message" name="message" rows="5" placeholder="프로젝트에 대해 이야기해요." required></textarea>
+              <small class="error" aria-live="polite"></small>
+            </div>
+            <div class="form-actions">
+              <button class="btn primary" type="submit">보내기</button>
+              <p class="form-note">영업일 기준 1-2일 내 회신드립니다.</p>
+            </div>
+          </form>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-inner">
+        <p>© <span id="year"></span> 이은성. All rights reserved.</p>
+        <a href="#top" class="to-top" aria-label="위로 이동">▲</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+  </html>
+
+
